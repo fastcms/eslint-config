@@ -1,0 +1,26 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  "eslint.run": "onSave",
+  "eslint.packageManager": "yarn",
+  "eslint.alwaysShowStatus": true,
+  "eslint.options": {
+    "extensions": [".js", ".cjs", ".mjs", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
+  },
+  "eslint.validate": [
+    "markdown",
+    "mdx",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [],
+
+  "deepscan.enable": true
+}

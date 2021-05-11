@@ -1,0 +1,26 @@
+import { IconGallery, IconItem, Meta } from '@storybook/addon-docs/blocks';
+import { SVGSpriteProvider } from '@fastcms/svg-sprite';
+import { SvgIcon } from '../components/SvgIcon';
+
+<Meta title="Icons" />
+
+# Icons
+
+List all icons using by @fastcms projects.
+
+<IconGallery>
+  <SVGSpriteProvider>
+    <IconItem name="close">
+      <SvgIcon name="close" />
+    </IconItem>
+    <IconItem name="menu">
+      <SvgIcon name="menu" />
+    </IconItem>
+    <IconItem name="openinnew">
+      <SvgIcon name="openinnew" />
+    </IconItem>
+    <IconItem name="search">
+      <SvgIcon name="search" />
+    </IconItem>
+  </SVGSpriteProvider>
+</IconGallery>

@@ -1,0 +1,152 @@
+{
+  "name": "@fastcms/eslint-config",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Shared ESLint configs for web development projects of FastCMS, Inc.",
+  "keywords": [
+    "babel",
+    "eslint",
+    "eslint-config",
+    "fastcms",
+    "linter",
+    "prettier",
+    "react",
+    "typescript"
+  ],
+  "homepage": "https://npm.im/@fastcms/eslint-config",
+  "bugs": {
+    "url": "https://github.com/fastcms/eslint-config/issues",
+    "email": "hello@fastcms.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fastcms/eslint-config"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ritchie Zhu",
+    "email": "laozhu.me@gmail.com",
+    "url": "https://laozhu.me"
+  },
+  "contributors": [
+    {
+      "name": "Ritchie Zhu",
+      "email": "laozhu.me@gmail.com",
+      "url": "https://laozhu.me"
+    }
+  ],
+  "main": "index.js",
+  "files": [
+    "base.js",
+    "index.js",
+    "lib/*",
+    "markdown.js",
+    "react.js",
+    "testing.js",
+    "tsconfig.base.json",
+    "tsconfig.eslint.json",
+    "typescript.js",
+    "typescript-markdown.js",
+    "typescript-react.js"
+  ],
+  "scripts": {
+    "ci": "run-s prettier eslint test",
+    "commit": "git-cz",
+    "commit:dirty": "yarn run commit --no-verify",
+    "eslint": "eslint --cache --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx, .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx, .",
+    "prepare": "husky install",
+    "prepublishOnly": "yarn run ci",
+    "prettier": "prettier --check \"**/*.{json,htm,html,md,mdx}\"",
+    "prettier:fix": "prettier --write \"**/*.{json,htm,html,md,mdx}\"",
+    "test": "jest --cache --passWithNoTests"
+  },
+  "lint-staged": {
+    "**/*.{js,cjs,mjs,jsx,ts,tsx,md,mdx}": "yarn run eslint",
+    "**/*.{json,htm,html,md,mdx}": "pretty-quick --staged"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-plugin": "^7.13.16",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.15",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-compat": "^3.9.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jest-dom": "^3.9.0",
+    "eslint-plugin-jest-formatting": "^3.0.0",
+    "eslint-plugin-jsdoc": "^34.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-markdown": "^2.1.0",
+    "eslint-plugin-mdx": "^1.13.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sort-class-members": "^1.11.0",
+    "eslint-plugin-testing-library": "^4.2.1",
+    "eslint-plugin-tsdoc": "^0.2.14",
+    "eslint-plugin-unicorn": "^32.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@types/eslint": "^7.2.10",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.4",
+    "babel-jest": "^26.6.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.26.0",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.3.0",
+    "prettier-plugin-packagejson": "^2.2.11",
+    "pretty-quick": "^3.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-jest": "^26.5.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.14.0",
+    "eslint": "^7.26.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
+  },
+  "optionalDependencies": {
+    "babel-plugin-module-resolver": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=14.16.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org",
+    "tag": "latest"
+  }
+}

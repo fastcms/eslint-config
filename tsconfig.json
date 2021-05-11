@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["__files__"],
+  "compilerOptions": {
+    "types": ["eslint", "jest", "node", "react", "react-dom"]
+  }
+}
