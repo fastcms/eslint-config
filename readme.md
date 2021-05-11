@@ -1,6 +1,6 @@
 # @fastcms/eslint-config
 
-![npm (scoped)](https://img.shields.io/npm/v/@fastcms/eslint-config) ![David](https://img.shields.io/david/fastcms/eslint-config) ![GitHub](https://img.shields.io/github/license/fastcms/eslint-config)
+![npm (scoped)](https://img.shields.io/npm/v/@fastcms/eslint-config) ![David](https://img.shields.io/david/fastcms/eslint-config) ![GitHub](https://img.shields.io/github/license/fastcms/eslint-config) ![GitHub CI Workflow](https://github.com/fastcms/eslint-config/actions/workflows/main.yml/badge.svg) ![GitHub CodeQL Workflow](https://github.com/fastcms/eslint-config/actions/workflows/codeql-analysis.yml/badge.svg)
 
 > Shared @eslint configs for web development projects of @fastcms.
 
