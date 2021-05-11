@@ -2,13 +2,14 @@
   "name": "@fastcms/eslint-config",
   "version": "1.0.0",
   "private": false,
-  "description": "Shared ESLint configs for web development projects of FastCMS, Inc.",
+  "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [
     "babel",
     "eslint",
     "eslint-config",
     "fastcms",
     "linter",
+    "markdown",
     "prettier",
     "react",
     "typescript"
@@ -55,7 +56,6 @@
     "commit:dirty": "yarn run commit --no-verify",
     "eslint": "eslint --cache --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx, .",
     "eslint:fix": "eslint --cache --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx, .",
-    "prepare": "husky install",
     "prepublishOnly": "yarn run ci",
     "prettier": "prettier --check \"**/*.{json,htm,html,md,mdx}\"",
     "prettier:fix": "prettier --write \"**/*.{json,htm,html,md,mdx}\"",
