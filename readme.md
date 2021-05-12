@@ -35,6 +35,19 @@ After installation, add following contents to your `.eslintrc` or the `eslintCon
 }
 ```
 
+If you want to use different `tsconfig.json` for each working directory, you should add `eslint.workingDirectories` in `.vscode/settings.json`.
+
+```json
+{
+  "eslint.workingDirectories": [
+    "./@types/fastcms",
+    "./apps/react-app",
+    "./libs/utils",
+    "./tools/eslint-config"
+  ]
+}
+```
+
 ### JavaScript only project
 
 ```json
@@ -67,13 +80,18 @@ After installation, add following contents to your `.eslintrc` or the `eslintCon
 }
 ```
 
-## TODO
+## Scripts
 
-- [ ] bug: mdx with external react components parse error
-- [ ] feat: fenced codeblock in markdown should support `ts` and `tsx`
-- [ ] feat: add more typescript rules (refer to [eslint-config-airbnb-typescript](iamturns/eslint-config-airbnb-typescript))
-- [ ] test: add more tests for ESLint rules
-- [ ] ci: integrate repo with [GitHub Actions](https://docs.github.com/cn/actions/guides/building-and-testing-nodejs)
+Add eslint scripts to `package.json`, then run ESLint with `yarn run eslint` manually, or integrate with GitHub Actions.
+
+```json
+{
+  "scripts": {
+    "eslint": "eslint --cache --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx, .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx, ."
+  }
+}
+```
 
 ## License
 
