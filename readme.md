@@ -1,6 +1,6 @@
 # @fastcms/eslint-config
 
-![npm (scoped)](https://img.shields.io/npm/v/@fastcms/eslint-config) ![David](https://img.shields.io/david/fastcms/eslint-config) ![GitHub](https://img.shields.io/github/license/fastcms/eslint-config) ![GitHub CI Workflow](https://github.com/fastcms/eslint-config/actions/workflows/main.yml/badge.svg) ![GitHub CodeQL Workflow](https://github.com/fastcms/eslint-config/actions/workflows/codeql-analysis.yml/badge.svg)
+![NPM Package Version](https://img.shields.io/npm/v/@fastcms/eslint-config) ![Dependencies](https://img.shields.io/david/fastcms/eslint-config) ![Dev Dependencies](https://img.shields.io/david/dev/fastcms/eslint-config) ![MIT License](https://img.shields.io/github/license/fastcms/eslint-config) ![GitHub CI Workflow](https://github.com/fastcms/eslint-config/actions/workflows/main.yml/badge.svg) ![GitHub CodeQL Workflow](https://github.com/fastcms/eslint-config/actions/workflows/codeql-analysis.yml/badge.svg)
 
 > Shared @eslint configs for web development projects of @fastcms.
 
@@ -35,7 +35,7 @@ After installation, add following contents to your `.eslintrc` or the `eslintCon
 }
 ```
 
-If you want to use different `tsconfig.json` for each working directory, you should add `eslint.workingDirectories` in `.vscode/settings.json`.
+If you want to use different `tsconfig.json` for each working directory, you should add `workingDirectories` in `.vscode/settings.json`.
 
 ```json
 {
@@ -87,8 +87,8 @@ Add eslint scripts to `package.json`, then run ESLint with `yarn run eslint` man
 ```json
 {
   "scripts": {
-    "eslint": "eslint --cache --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx, .",
-    "eslint:fix": "eslint --cache --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx, ."
+    "eslint": "eslint --cache --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx ."
   }
 }
 ```
