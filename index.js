@@ -1,131 +1,129 @@
 module.exports = {
-  extends: ['./lib/common.js', './lib/mdx.js'].map(require.resolve),
+  extends: [require.resolve('./lib/common.js')],
 
   plugins: ['markdown'],
 
   overrides: [
     {
       files: ['**/*.js'],
+      excludedFiles: [
+        '**/*.{md,mdx}/*.js',
+        '**/*.{spec,test}.js',
+        '**/{test,tests,__tests__}/**/*.js',
+      ],
       extends: [require.resolve('./base.js')],
     },
+
     {
       files: ['**/*.cjs'],
+      excludedFiles: ['**/*.{spec,test}.cjs', '**/{test,tests,__tests__}/**/*.cjs'],
       extends: ['./base.js', './lib/cjs.js'].map(require.resolve),
     },
+
     {
       files: ['**/*.mjs'],
+      excludedFiles: ['**/*.{spec,test}.mjs', '**/{test,tests,__tests__}/**/*.mjs'],
       extends: ['./base.js', './lib/mjs.js'].map(require.resolve),
     },
+
     {
       files: ['**/*.jsx'],
+      excludedFiles: [
+        '**/*.{md,mdx}/*.jsx',
+        '**/*.{spec,test}.jsx',
+        '**/{test,tests,__tests__}/**/*.jsx',
+      ],
       extends: [require.resolve('./react.js')],
     },
+
     {
       files: ['**/*.ts'],
+      excludedFiles: [
+        '**/*.d.ts',
+        '**/*.{md,mdx}/*.ts',
+        '**/*.{spec,test}.ts',
+        '**/{test,tests,__tests__}/**/*.ts',
+      ],
       extends: [require.resolve('./typescript.js')],
     },
+
     {
       files: ['**/*.tsx'],
+      excludedFiles: [
+        '**/*.{md,mdx}/*.tsx',
+        '**/*.{spec,test}.tsx',
+        '**/{test,tests,__tests__}/**/*.tsx',
+      ],
       extends: [require.resolve('./typescript-react.js')],
     },
+
     {
       files: ['**/*.d.ts'],
+      excludedFiles: ['**/*.{css,scss,sass,less}.d.ts'],
       extends: ['./typescript.js', './lib/dts.js'].map(require.resolve),
     },
+
     {
-      files: ['**/*.css.d.ts', '**/*.scss.d.ts', '**/*.sass.d.ts', '**/*.less.d.ts'],
+      files: ['**/*.{css,scss,sass,less}.d.ts'],
       extends: ['./typescript.js', './lib/dts.js'].map(require.resolve),
       rules: {
         'prettier/prettier': 'off',
       },
     },
+
     {
-      files: ['**/{test,tests,__tests__}/**/*.js', '**/*.{spec,test}.js'],
+      files: ['**/*.{spec,test}.js', '**/{test,tests,__tests__}/**/*.js'],
       extends: ['./base.js', './lib/test-dom.js'].map(require.resolve),
     },
+
     {
-      files: ['**/{test,tests,__tests__}/**/*.cjs', '**/*.{spec,test}.cjs'],
+      files: ['**/*.{spec,test}.cjs', '**/{test,tests,__tests__}/**/*.cjs'],
       extends: ['./base.js', './lib/cjs.js', './lib/test-dom.js'].map(require.resolve),
     },
+
     {
-      files: ['**/{test,tests,__tests__}/**/*.mjs', '**/*.{spec,test}.mjs'],
+      files: ['**/*.{spec,test}.mjs', '**/{test,tests,__tests__}/**/*.mjs'],
       extends: ['./base.js', './lib/mjs.js', './lib/test-dom.js'].map(require.resolve),
     },
+
     {
-      files: ['**/{test,tests,__tests__}/**/*.jsx', '**/*.{spec,test}.jsx'],
+      files: ['**/*.{spec,test}.jsx', '**/{test,tests,__tests__}/**/*.jsx'],
       extends: ['./react.js', './lib/test-react.js'].map(require.resolve),
     },
+
     {
-      files: ['**/{test,tests,__tests__}/**/*.ts', '**/*.{spec,test}.ts'],
+      files: ['**/*.{spec,test}.ts', '**/{test,tests,__tests__}/**/*.ts'],
       extends: ['./typescript.js', './lib/test-dom.js'].map(require.resolve),
     },
+
     {
-      files: ['**/{test,tests,__tests__}/**/*.tsx', '**/*.{spec,test}.tsx'],
+      files: ['**/*.{spec,test}.tsx', '**/{test,tests,__tests__}/**/*.tsx'],
       extends: ['./typescript-react.js', './lib/test-react.js'].map(require.resolve),
     },
+
     {
-      files: ['**/*.md'],
+      files: ['**/*.{md,mdx}'],
       processor: 'markdown/markdown',
-      rules: {
-        'prettier/prettier': [
-          'error',
-          {
-            parser: 'markdown',
-          },
-        ],
-      },
     },
+
     {
-      files: ['*.mdx'],
-      extends: ['plugin:mdx/overrides'],
+      files: ['**/*.{md,mdx}/*.js'],
+      extends: [require.resolve('./lib/markdown-base')],
     },
+
     {
-      files: '**/*.mdx/*.js',
-      extends: [
-        'plugin:mdx/code-blocks',
-        require.resolve('./base.js'),
-        require.resolve('./lib/markdown.js'),
-      ],
+      files: ['**/*.{md,mdx}/*.jsx'],
+      extends: [require.resolve('./lib/markdown-react')],
     },
+
     {
-      files: '**/*.mdx/*.jsx',
-      extends: [
-        'plugin:mdx/code-blocks',
-        require.resolve('./react.js'),
-        require.resolve('./lib/markdown.js'),
-      ],
+      files: ['**/*.{md,mdx}/*.ts'],
+      extends: [require.resolve('./lib/markdown-typescript')],
     },
+
     {
-      files: '**/*.mdx/*.ts',
-      extends: [
-        'plugin:mdx/code-blocks',
-        require.resolve('./typescript.js'),
-        require.resolve('./lib/markdown.js'),
-      ],
-    },
-    {
-      files: '**/*.mdx/*.tsx',
-      extends: [
-        'plugin:mdx/code-blocks',
-        require.resolve('./typescript-react.js'),
-        require.resolve('./lib/markdown.js'),
-      ],
-    },
-    {
-      files: ['**/*.md/*.js'],
-      extends: ['./base.js', './lib/markdown.js'].map(require.resolve),
-    },
-    {
-      files: ['**/*.md/*.jsx'],
-      extends: ['./react.js', './lib/markdown.js'].map(require.resolve),
-    },
-    {
-      files: ['**/*.md/*.ts'],
-      extends: ['./typescript.js', './lib/markdown.js'].map(require.resolve),
-    },
-    {
-      files: ['**/*.md/*.tsx'],
-      extends: ['./typescript-react.js', './lib/markdown.js'].map(require.resolve),
+      files: ['**/*.{md,mdx}/*.tsx'],
+      extends: [require.resolve('./lib/markdown-typescript-react')],
     },
   ],
 };
