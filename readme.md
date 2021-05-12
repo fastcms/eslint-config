@@ -35,8 +35,6 @@ After installation, add following contents to your `.eslintrc` or the `eslintCon
 }
 ```
 
-_Added `markdown` and `testing` presets automatically._
-
 ### JavaScript only project
 
 ```json
@@ -69,22 +67,6 @@ _Added `markdown` and `testing` presets automatically._
 }
 ```
 
-### Markdown only project (with mdx)
-
-```json
-{
-  "extends": ["@fastcms/eslint-config/markdown"]
-}
-```
-
-### Testing only project (with jsx/tsx)
-
-```json
-{
-  "extends": ["@fastcms/eslint-config/testing"]
-}
-```
-
 ## TODO
 
 - [ ] bug: mdx with external react components parse error
@@ -95,4 +77,4 @@ _Added `markdown` and `testing` presets automatically._
 
 ## License
 
-The scripts and documentation in this project are released under the [MIT License](./license)
+The codebase and documentation in this repository are released under the [MIT License](./license)

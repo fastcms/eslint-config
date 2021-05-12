@@ -4,7 +4,6 @@
     "enable": true
   },
   "compilerOptions": {
-    // Project Options
     "allowJs": true,
     "checkJs": false,
     "declaration": true,
@@ -19,35 +18,23 @@
     "removeComments": true,
     "sourceMap": true,
     "target": "ESNext",
-
-    // Strict Checks
     "alwaysStrict": false,
     "strict": true,
-
-    // Module Resolution
     "allowSyntheticDefaultImports": true,
     "allowUmdGlobalAccess": false,
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "preserveSymlinks": false,
-
-    // Source Maps
     "inlineSourceMap": false,
     "inlineSources": false,
-
-    // Linter Checks
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
-    // Experimental
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-
-    // Advanced
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "assumeChangesOnlyAffectDirectDependencies": true,
@@ -80,8 +67,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "traceResolution": false,
     "useDefineForClassFields": true,
-
-    // Command Line
     "preserveWatchOutput": false,
     "pretty": true
   }

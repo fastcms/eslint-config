@@ -2967,10 +2967,10 @@ eslint-plugin-jest@^24.3.6:
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
-eslint-plugin-jsdoc@^34.0.1:
-  version "34.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-34.0.1.tgz#d1ec714e8ea6ab13416f22ce9423bc9e6dca3640"
-  integrity sha512-fXFyhM571aW1Eg5Z9INobK1VeMIcfflY4cnqDYFf5KRUwcR5R+TQIC6pU2C+4xA84s7lML3zi7UIbPOWBjU1YQ==
+eslint-plugin-jsdoc@^34.0.2:
+  version "34.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-34.0.2.tgz#9e7ec1a9dedd4ea4b04b7a0fa785f3f3cad9d4e1"
+  integrity sha512-QquvZgL/p8eIoMjOQ/G3xuEEfq+GJZn71D+1N8cM4VxZBJcjTN0J3MM+lQDN7zaiuYtLKwt1jeJbEt2C2HhXkg==
   dependencies:
     "@es-joy/jsdoccomment" "^0.4.4"
     comment-parser "1.1.5"
@@ -3080,10 +3080,10 @@ eslint-plugin-sort-class-members@^1.11.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-sort-class-members/-/eslint-plugin-sort-class-members-1.11.0.tgz#4290c57eba8991521fbca3430e002da8ab860729"
   integrity sha512-kobZtUOyzyYVotc/GDnlmQ6sSaxYuVElwEowD5RQ6Kajq4Lfb3CPE1THaXbDl97HLNthThRZWtdNx1GrFhCm7Q==
 
-eslint-plugin-testing-library@^4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-4.2.1.tgz#0ec98db5bab0199ad01fb42361d510a0bb8caf9d"
-  integrity sha512-wejetD2Vlx2QDDMDmonsDi2aqlGRlDkbeEhM8vZmfOaHZBemEHSmgCXjAigItGnTxyFUsdSsXIeRayU3Mv/nxg==
+eslint-plugin-testing-library@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-testing-library/-/eslint-plugin-testing-library-4.3.0.tgz#f902103b3c837e8ad4faaf5b4dd1b7db2fc337b2"
+  integrity sha512-zl9b6kusePn7+f8ptSMycKM5DkbaGoDsPJwAxew3mA7779nLSWhEvxa6ldWUunAyTHbi+gszOrz5WYlOlKfqkQ==
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.21.0"
 

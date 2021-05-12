@@ -6,6 +6,8 @@
     "source.fixAll.eslint": true
   },
 
+  "prettier.useEditorConfig": true,
+
   "eslint.run": "onSave",
   "eslint.packageManager": "yarn",
   "eslint.alwaysShowStatus": true,
