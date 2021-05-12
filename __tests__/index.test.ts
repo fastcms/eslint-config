@@ -66,6 +66,11 @@ describe('Test ESLint Config', () => {
     expect(message.ruleId).toEqual('react/no-array-index-key');
   });
 
+  it('markdown:@typescript-eslint/ban-types', async () => {
+    const message = await getLintMessage(`${filesRoot}/ban-types.md`);
+    expect(message.ruleId).toEqual('@typescript-eslint/ban-types');
+  });
+
   it('mdx:eqeqeq', async () => {
     const message = await getLintMessage(`${filesRoot}/eqeqeq.mdx`);
     expect(message.ruleId).toEqual('eqeqeq');
@@ -76,9 +81,13 @@ describe('Test ESLint Config', () => {
     expect(message.ruleId).toEqual('react/no-array-index-key');
   });
 
+  it('mdx:react-hooks/exhaustive-deps', async () => {
+    const message = await getLintMessage(`${filesRoot}/exhaustive-deps.mdx`);
+    expect(message.ruleId).toEqual('react-hooks/exhaustive-deps');
+  });
+
   it('mdx:Icons.stories', async () => {
-    // TODO: Parse mdx error for this test case
     const message = await getLintMessage(`${filesRoot}/Icons.stories.mdx`);
-    expect(message.ruleId).toBeNull();
+    expect(message).toBeUndefined();
   });
 });

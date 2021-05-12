@@ -1,0 +1,22 @@
+# exhaustive-deps
+
+```tsx
+import React, { useMemo } from 'react';
+
+export interface HelloProps {
+  firstName: string;
+  lastName: string;
+}
+
+const Hello: React.FC<HelloProps> = (props) => {
+  const { firstName, lastName } = props;
+
+  const name = useMemo(() => {
+    return `${firstName} ${lastName}`;
+  }, []);
+
+  return <p>{name}</p>;
+};
+
+export default Hello;
+```
