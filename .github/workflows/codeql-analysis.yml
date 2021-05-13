@@ -5,15 +5,18 @@ on:
     branches:
       - master
     paths-ignore:
-      - '.github'
-      - '.vscode'
+      - '.github/**'
+      - '.husky/**'
+      - '.vscode/**'
       - 'license'
       - 'readme.md'
   pull_request:
     branches:
       - master
     paths-ignore:
-      - '.vscode'
+      - '.github/**'
+      - '.husky/**'
+      - '.vscode/**'
       - 'license'
       - 'readme.md'
   schedule:
