@@ -1,6 +1,6 @@
-# @fastcms/eslint-config
+# eslint-config
 
-![NPM Package Version](https://img.shields.io/npm/v/@fastcms/eslint-config) ![Node.js Version](https://img.shields.io/node/v/@fastcms/eslint-config) ![Peer ESLint Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/eslint) ![Peer Prettier Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/prettier) ![Peer TypeScript Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/typescript) ![Dependencies](https://img.shields.io/david/fastcms/eslint-config) ![Dev Dependencies](https://img.shields.io/david/dev/fastcms/eslint-config) ![MIT License](https://img.shields.io/github/license/fastcms/eslint-config) ![GitHub Contributors](https://img.shields.io/github/contributors/fastcms/eslint-config) ![GitHub CI Workflow](https://github.com/fastcms/eslint-config/actions/workflows/main.yml/badge.svg) ![GitHub CodeQL Workflow](https://github.com/fastcms/eslint-config/actions/workflows/codeql-analysis.yml/badge.svg) ![NPM Weekly Downloads](https://img.shields.io/npm/dw/@fastcms/eslint-config)
+![NPM Package Version](https://img.shields.io/npm/v/@fastcms/eslint-config) ![Peer ESLint Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/eslint) ![Peer Prettier Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/prettier) ![Peer TypeScript Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/typescript) ![Node.js Version](https://img.shields.io/node/v/@fastcms/eslint-config) ![Dependencies](https://img.shields.io/david/fastcms/eslint-config) ![Dev Dependencies](https://img.shields.io/david/dev/fastcms/eslint-config) ![NPM Weekly Downloads](https://img.shields.io/npm/dw/@fastcms/eslint-config) ![GitHub CI Workflow](https://github.com/fastcms/eslint-config/actions/workflows/main.yml/badge.svg) ![GitHub CodeQL Workflow](https://github.com/fastcms/eslint-config/actions/workflows/codeql-analysis.yml/badge.svg) ![MIT License](https://img.shields.io/github/license/fastcms/eslint-config) ![GitHub Contributors](https://img.shields.io/github/contributors/fastcms/eslint-config)
 
 > Shared @eslint configs for web development projects of @fastcms.
 
@@ -49,7 +49,7 @@ If you want to use different `tsconfig.json` for each working directory, you sho
 }
 ```
 
-### JavaScript only project
+### JavaScript Only Project
 
 ```json
 {
@@ -59,7 +59,7 @@ If you want to use different `tsconfig.json` for each working directory, you sho
 
 This ESLint config is used for javascript only libraries or tools.
 
-### JavaScript only project (with jsx)
+### JavaScript React Project
 
 ```json
 {
@@ -69,7 +69,7 @@ This ESLint config is used for javascript only libraries or tools.
 
 This ESLint config is used for javascript only react components or apps.
 
-### TypeScript project
+### TypeScript Project
 
 ```json
 {
@@ -79,7 +79,7 @@ This ESLint config is used for javascript only react components or apps.
 
 This ESLint config is used for typescript first libraries or tools.
 
-### TypeScript only project (with tsx)
+### TypeScript React Project
 
 ```json
 {
@@ -89,7 +89,7 @@ This ESLint config is used for typescript first libraries or tools.
 
 This ESlint config is used for typescript first react components or apps.
 
-### Node
+### Node.js Project
 
 ```json
 {
@@ -99,7 +99,7 @@ This ESlint config is used for typescript first react components or apps.
 
 This ESLint config is used for nodejs libraries, tools or apps.
 
-### MiniProgram
+### MiniProgram Project
 
 ```json
 {
