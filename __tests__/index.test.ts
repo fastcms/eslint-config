@@ -1,4 +1,4 @@
-import getLintMessage from '../lib/get-lint-messge';
+import getLintMessage from '../util/get-lint-messge';
 
 const filesRoot = '__files__';
 

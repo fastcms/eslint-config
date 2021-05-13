@@ -11,12 +11,12 @@ module.exports = {
         '**/*.{spec,test}.js',
         '**/{test,tests,__tests__}/**/*.js',
       ],
-      extends: ['./lib/js.js', './lib/browser.js'].map(require.resolve),
+      extends: ['./lib/js.js', './lib/node.js'].map(require.resolve),
     },
 
     {
       files: ['**/*.{spec,test}.js', '**/{test,tests,__tests__}/**/*.js'],
-      extends: ['./lib/js.js', './lib/browser.js', './lib/test-dom.js'].map(require.resolve),
+      extends: ['./lib/js.js', './lib/node.js', './lib/test-jest.js'].map(require.resolve),
     },
 
     {
@@ -27,7 +27,7 @@ module.exports = {
 
     {
       files: ['**/*.{spec,test}.cjs', '**/{test,tests,__tests__}/**/*.cjs'],
-      extends: ['./lib/js.js', './lib/cjs.js', './lib/test-dom.js'].map(require.resolve),
+      extends: ['./lib/js.js', './lib/cjs.js', './lib/test-jest.js'].map(require.resolve),
     },
 
     {
@@ -38,7 +38,28 @@ module.exports = {
 
     {
       files: ['**/*.{spec,test}.mjs', '**/{test,tests,__tests__}/**/*.mjs'],
-      extends: ['./lib/js.js', './lib/mjs.js', './lib/test-dom.js'].map(require.resolve),
+      extends: ['./lib/js.js', './lib/mjs.js', './lib/test-jest.js'].map(require.resolve),
+    },
+
+    {
+      files: ['**/*.ts'],
+      excludedFiles: [
+        '**/*.d.ts',
+        '**/*.{md,mdx}/*.ts',
+        '**/*.{spec,test}.ts',
+        '**/{test,tests,__tests__}/**/*.ts',
+      ],
+      extends: ['./lib/ts.js', './lib/node.js'].map(require.resolve),
+    },
+
+    {
+      files: ['**/*.{spec,test}.ts', '**/{test,tests,__tests__}/**/*.ts'],
+      extends: ['./lib/ts.js', './lib/node.js', './lib/test-jest.js'].map(require.resolve),
+    },
+
+    {
+      files: ['**/*.d.ts'],
+      extends: ['./lib/ts.js', './lib/dts.js', './lib/node.js'].map(require.resolve),
     },
 
     {
@@ -48,22 +69,22 @@ module.exports = {
 
     {
       files: ['**/*.{md,mdx}/*.js'],
-      extends: ['./lib/md.js', './lib/browser.js'].map(require.resolve),
+      extends: ['./lib/md.js', './lib/node.js'].map(require.resolve),
     },
 
     {
       files: ['**/*.{md,mdx}/*.jsx'],
-      extends: ['./lib/mdx.js', './lib/browser.js'].map(require.resolve),
+      extends: ['./lib/mdx.js', './lib/node.js'].map(require.resolve),
     },
 
     {
       files: ['**/*.{md,mdx}/*.ts'],
-      extends: ['./lib/md-ts.js', './lib/browser.js'].map(require.resolve),
+      extends: ['./lib/md-ts.js', './lib/node.js'].map(require.resolve),
     },
 
     {
       files: ['**/*.{md,mdx}/*.tsx'],
-      extends: ['./lib/mdx-ts', './lib/browser.js'].map(require.resolve),
+      extends: ['./lib/mdx-ts', './lib/node.js'].map(require.resolve),
     },
   ],
 };

@@ -1,59 +1,20 @@
-const extensions = ['.js', '.cjs', '.mjs', '.jsx', '.wasm', '.json'];
-
 module.exports = {
-  parser: '@babel/eslint-parser',
+  extends: [require.resolve('./base.js')],
 
-  extends: [
-    'eslint-config-airbnb',
-    'eslint-config-airbnb/hooks',
-
-    './lib/common.js',
-    './lib/babel.js',
-    './lib/react.js',
-    './lib/jsdoc.js',
-    './lib/prettier.js',
-  ].map(require.resolve),
-
-  parserOptions: {
-    allowImportExportEverywhere: false,
-    requireConfigFile: false,
-    babelOptions: {
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            bugfixes: true,
-            targets: {
-              esmodules: true,
-            },
-          },
-        ],
-        [
-          '@babel/preset-react',
-          {
-            runtime: 'automatic',
-          },
-        ],
+  overrides: [
+    {
+      files: ['**/*.jsx'],
+      excludedFiles: [
+        '**/*.{md,mdx}/*.jsx',
+        '**/*.{spec,test}.jsx',
+        '**/{test,tests,__tests__}/**/*.jsx',
       ],
-      plugins: [
-        ['@babel/plugin-proposal-decorators', { legacy: true }],
-        ['@babel/plugin-proposal-class-properties', { loose: true }],
-      ],
+      extends: ['./lib/jsx.js', './lib/browser.js'].map(require.resolve),
     },
-  },
 
-  settings: {
-    'import/extensions': extensions,
-    'import/resolver': {
-      'node': {
-        extensions,
-      },
-      'babel-module': {
-        allowExistingDirectories: true,
-      },
+    {
+      files: ['**/*.{spec,test}.jsx', '**/{test,tests,__tests__}/**/*.jsx'],
+      extends: ['./lib/jsx.js', './lib/browser.js', './lib/test-react.js'].map(require.resolve),
     },
-    'import/parsers': {
-      '@babel/eslint-parser': ['.js', '.cjs', '.mjs', '.jsx'],
-    },
-  },
+  ],
 };
