@@ -6,7 +6,7 @@
 
 This shared ESLint config is extended from both [airbnb](https://github.com/airbnb/javascript) and [prettier](https://prettier.io/) styles, it also can be used for monorepo project.
 
-## Install
+## Installation
 
 Use npx to install peerdeps automatically or install peerDependencies and optionalDependencies with npm/yarn manually.
 
@@ -148,6 +148,16 @@ Add eslint scripts to `package.json`, then run ESLint with `yarn run eslint` man
   }
 }
 ```
+
+## Project TypeScript Config
+
+If your project includes TypeScript code, you should provide `tsconfig.json` for ESLint, the searching priority of `tsconfig.json` are below.
+
+1. tsconfig.eslint.json (_root_)
+2. tsconfig.json (_root_)
+3. packages/\*/tsconfig.eslint.json (_workspace_)
+4. packages/\*/tsconfig.json (_workspace_)
+5. @fastcms/eslint-config/tsconfig.eslint.json (_default_)
 
 ## License
 
