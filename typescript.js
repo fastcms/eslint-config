@@ -15,7 +15,7 @@ module.exports = {
 
     {
       files: ['**/*.{spec,test}.ts', '**/{test,tests,__tests__}/**/*.ts'],
-      extends: ['./lib/ts.js', './lib/browser.js', './lib/test-dom.js'].map(require.resolve),
+      extends: ['./lib/ts.js', './lib/browser.js', './lib/testing.js'].map(require.resolve),
     },
 
     {

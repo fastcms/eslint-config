@@ -14,7 +14,7 @@ module.exports = {
 
     {
       files: ['**/*.{spec,test}.jsx', '**/{test,tests,__tests__}/**/*.jsx'],
-      extends: ['./lib/jsx.js', './lib/browser.js', './lib/test-react.js'].map(require.resolve),
+      extends: ['./lib/jsx.js', './lib/browser.js', './lib/testing.js'].map(require.resolve),
     },
   ],
 };

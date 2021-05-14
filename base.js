@@ -16,7 +16,7 @@ module.exports = {
 
     {
       files: ['**/*.{spec,test}.js', '**/{test,tests,__tests__}/**/*.js'],
-      extends: ['./lib/js.js', './lib/browser.js', './lib/test-dom.js'].map(require.resolve),
+      extends: ['./lib/js.js', './lib/browser.js', './lib/testing.js'].map(require.resolve),
     },
 
     {
@@ -27,7 +27,7 @@ module.exports = {
 
     {
       files: ['**/*.{spec,test}.cjs', '**/{test,tests,__tests__}/**/*.cjs'],
-      extends: ['./lib/js.js', './lib/cjs.js', './lib/test-dom.js'].map(require.resolve),
+      extends: ['./lib/js.js', './lib/cjs.js', './lib/testing.js'].map(require.resolve),
     },
 
     {
@@ -38,7 +38,7 @@ module.exports = {
 
     {
       files: ['**/*.{spec,test}.mjs', '**/{test,tests,__tests__}/**/*.mjs'],
-      extends: ['./lib/js.js', './lib/mjs.js', './lib/test-dom.js'].map(require.resolve),
+      extends: ['./lib/js.js', './lib/mjs.js', './lib/testing.js'].map(require.resolve),
     },
 
     {
