@@ -1,9 +1,3 @@
 {
-  "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "deepscan.vscode-deepscan",
-    "esbenp.prettier-vscode",
-    "jounqin.vscode-mdx",
-    "silvenon.mdx"
-  ]
+  "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
 }

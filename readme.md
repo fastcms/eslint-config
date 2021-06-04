@@ -49,17 +49,7 @@ If you want to use different `tsconfig.json` for each working directory, you sho
 }
 ```
 
-### JavaScript Only Project
-
-```json
-{
-  "extends": "@fastcms/eslint-config/base"
-}
-```
-
-This ESLint config is used for javascript only libraries or tools.
-
-### JavaScript React Project
+### Pure JavaScript React Project
 
 ```json
 {
@@ -67,9 +57,9 @@ This ESLint config is used for javascript only libraries or tools.
 }
 ```
 
-This ESLint config is used for javascript only react components or apps.
+This ESLint config is used for pure javascript utils, react components or apps.
 
-### TypeScript Project
+### TypeScript First React Project
 
 ```json
 {
@@ -77,64 +67,7 @@ This ESLint config is used for javascript only react components or apps.
 }
 ```
 
-This ESLint config is used for typescript first libraries or tools.
-
-### TypeScript React Project
-
-```json
-{
-  "extends": "@fastcms/eslint-config/typescript-react"
-}
-```
-
-This ESlint config is used for typescript first react components or apps.
-
-### Node.js Project
-
-```json
-{
-  "extends": "@fastcms/eslint-config/node"
-}
-```
-
-This ESLint config is used for nodejs libraries, tools or apps.
-
-### MiniProgram Project
-
-```json
-{
-  "extends": "@fastcms/eslint-config/miniprogram"
-}
-```
-
-This ESLint config is used for wechat miniprogram projects.
-
-### Electron
-
-```json
-{
-  "extends": "@fastcms/eslint-config/electron"
-}
-```
-
-### ESLint Ignore
-
-You can add `.eslintignore` file or add `eslintIgnore` entry in `package.json` to exclude files or directories from lint. If you don't want to add `.eslintignore` file, extending `ignore-patterns.js` and adding `ignorePatterns` entry are also good choices.
-
-```json
-{
-  "extends": ["@fastcms", "@fastcms/eslint-config/ignore-patterns"]
-}
-```
-
-Or...
-
-```json
-{
-  "extends": "@fastcms",
-  "ignorePatterns": ["coverage", "node_modules"]
-}
-```
+This ESlint config is used for typescript first utils, react components or apps.
 
 ## ESLint Scripts
 
@@ -143,8 +76,8 @@ Add eslint scripts to `package.json`, then run ESLint with `yarn run eslint` man
 ```json
 {
   "scripts": {
-    "eslint": "eslint --cache --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
-    "eslint:fix": "eslint --cache --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx ."
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx,.md,.mdx ."
   }
 }
 ```
@@ -153,11 +86,8 @@ Add eslint scripts to `package.json`, then run ESLint with `yarn run eslint` man
 
 If your project includes TypeScript code, you should provide `tsconfig.json` for ESLint, the searching priority of `tsconfig.json` are below.
 
-1. tsconfig.eslint.json (_root_)
-2. tsconfig.json (_root_)
-3. packages/\*/tsconfig.eslint.json (_workspace_)
-4. packages/\*/tsconfig.json (_workspace_)
-5. @fastcms/eslint-config/tsconfig.eslint.json (_default_)
+1. tsconfig.json (_root_)
+2. packages/\*/tsconfig.json (_workspace_)
 
 ## License
 

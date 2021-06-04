@@ -1,20 +1,15 @@
 module.exports = {
-  extends: [require.resolve('./base.js')],
+  plugins: ['markdown'],
 
   overrides: [
     {
-      files: ['**/*.jsx'],
-      excludedFiles: [
-        '**/*.{md,mdx}/*.jsx',
-        '**/*.{spec,test}.jsx',
-        '**/{test,tests,__tests__}/**/*.jsx',
-      ],
-      extends: ['./lib/jsx.js', './lib/browser.js'].map(require.resolve),
+      files: ['**/*.{md,mdx}'],
+      processor: 'markdown/markdown',
     },
 
     {
-      files: ['**/*.{spec,test}.jsx', '**/{test,tests,__tests__}/**/*.jsx'],
-      extends: ['./lib/jsx.js', './lib/browser.js', './lib/testing.js'].map(require.resolve),
+      files: ['**/*.{js,jsx}'],
+      extends: [require.resolve('./lib/javascript.js')],
     },
   ],
 };

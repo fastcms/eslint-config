@@ -1,8 +1,5 @@
 {
   "compileOnSave": false,
-  "typeAcquisition": {
-    "enable": true
-  },
   "compilerOptions": {
     "allowJs": true,
     "checkJs": false,

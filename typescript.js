@@ -1,26 +1,15 @@
 module.exports = {
-  extends: [require.resolve('./base.js')],
+  plugins: ['markdown'],
 
   overrides: [
     {
-      files: ['**/*.ts'],
-      excludedFiles: [
-        '**/*.d.ts',
-        '**/*.{md,mdx}/*.ts',
-        '**/*.{spec,test}.ts',
-        '**/{test,tests,__tests__}/**/*.ts',
-      ],
-      extends: ['./lib/ts.js', './lib/browser.js'].map(require.resolve),
+      files: ['**/*.{md,mdx}'],
+      processor: 'markdown/markdown',
     },
 
     {
-      files: ['**/*.{spec,test}.ts', '**/{test,tests,__tests__}/**/*.ts'],
-      extends: ['./lib/ts.js', './lib/browser.js', './lib/testing.js'].map(require.resolve),
-    },
-
-    {
-      files: ['**/*.d.ts'],
-      extends: ['./lib/ts.js', './lib/dts.js', './lib/browser.js'].map(require.resolve),
+      files: ['**/*.{ts,tsx}'],
+      extends: [require.resolve('./lib/typescript.js')],
     },
   ],
 };

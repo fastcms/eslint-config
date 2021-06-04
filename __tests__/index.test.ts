@@ -36,16 +36,6 @@ describe('Test ESLint Config', () => {
     expect(message.ruleId).toEqual('@typescript-eslint/ban-types');
   });
 
-  it('mjs:prefer-module', async () => {
-    const message = await getLintMessage(`${filesRoot}/prefer-module.mjs`);
-    expect(message.ruleId).toEqual('unicorn/prefer-module');
-  });
-
-  it('cjs:node/no-exports-assign', async () => {
-    const message = await getLintMessage(`${filesRoot}/prefer-commonjs.cjs`);
-    expect(message.ruleId).toEqual('node/no-exports-assign');
-  });
-
   it('jsdoc:syntax', async () => {
     const message = await getLintMessage(`${filesRoot}/clamp.js`);
     expect(message.ruleId).toEqual('jsdoc/require-param-description');
