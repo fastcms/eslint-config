@@ -76,8 +76,8 @@ Add eslint scripts to `package.json`, then run ESLint with `yarn run eslint` man
 ```json
 {
   "scripts": {
-    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
-    "eslint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx,.md,.mdx ."
+    "eslint": "eslint --cache --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx ."
   }
 }
 ```

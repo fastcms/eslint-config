@@ -8,7 +8,7 @@ module.exports = {
     },
 
     {
-      files: ['**/*.{js,jsx}'],
+      files: ['**/*.{js,mjs,jsx}'],
       extends: [require.resolve('./lib/javascript.js')],
     },
 

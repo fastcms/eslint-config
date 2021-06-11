@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/eslint-config",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "private": false,
   "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [
@@ -49,15 +49,15 @@
     "ci": "run-s prettier eslint test",
     "commit": "git-cz",
     "commit:dirty": "yarn run commit --no-verify",
-    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
-    "eslint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint": "eslint --cache --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
     "prepublishOnly": "yarn run ci",
     "prettier": "prettier --check \"**/*.{json,html,md,mdx}\"",
     "prettier:fix": "prettier --write \"**/*.{json,html,md,mdx}\"",
     "test": "jest --cache --passWithNoTests"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,md,mdx}": "yarn run eslint",
+    "**/*.{js,mjs,jsx,ts,tsx,md,mdx}": "yarn run eslint",
     "**/*.{json,html,md,mdx}": "yarn run prettier"
   },
   "config": {
@@ -103,14 +103,13 @@
     },
     "verbose": true
   },
-  "resolutions": {
-    "trim": "^1.0.1"
-  },
   "dependencies": {
     "@babel/eslint-parser": "^7.14.5",
     "@babel/eslint-plugin": "^7.14.5",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@babel/plugin-proposal-private-methods": "^7.14.5",
+    "@babel/plugin-syntax-top-level-await": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "@typescript-eslint/eslint-plugin": "^4.26.1",

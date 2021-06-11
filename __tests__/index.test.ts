@@ -85,4 +85,9 @@ describe('Test ESLint Config', () => {
     const message = await getLintMessage(`${filesRoot}/Dashboard.less.d.ts`);
     expect(message).toBeUndefined();
   });
+
+  it('top-level-await', async () => {
+    const message = await getLintMessage(`${filesRoot}/xz.mjs`);
+    expect(message.ruleId).toEqual('import/no-unresolved');
+  });
 });
