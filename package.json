@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/eslint-config",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "private": false,
   "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [

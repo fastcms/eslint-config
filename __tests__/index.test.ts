@@ -80,4 +80,9 @@ describe('Test ESLint Config', () => {
     const message = await getLintMessage(`${filesRoot}/Icons.stories.mdx`);
     expect(message).toBeUndefined();
   });
+
+  it('pretter/prettier', async () => {
+    const message = await getLintMessage(`${filesRoot}/Dashboard.less.d.ts`);
+    expect(message).toBeUndefined();
+  });
 });
