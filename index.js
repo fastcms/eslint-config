@@ -9,12 +9,19 @@ module.exports = {
 
     {
       files: ['**/*.{js,mjs,jsx}'],
-      extends: [require.resolve('./lib/javascript.js')],
+      extends: [require.resolve('./lib/javascript.js'), 'plugin:prettier/recommended'],
     },
 
     {
       files: ['**/*.{ts,tsx}'],
-      extends: [require.resolve('./lib/typescript.js')],
+      extends: [require.resolve('./lib/typescript.js'), 'plugin:prettier/recommended'],
+    },
+
+    {
+      files: ['**/*.{css,scss,sass,less,wxss}.d.ts'],
+      rules: {
+        'prettier/prettier': 'off',
+      },
     },
   ],
 };

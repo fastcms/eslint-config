@@ -9,7 +9,7 @@ module.exports = {
 
     {
       files: ['**/*.{js,mjs,jsx}'],
-      extends: [require.resolve('./lib/javascript.js')],
+      extends: [require.resolve('./lib/javascript.js'), 'plugin:prettier/recommended'],
     },
   ],
 };
