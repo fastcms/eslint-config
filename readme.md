@@ -1,6 +1,6 @@
 # eslint-config
 
-![NPM Package Version](https://img.shields.io/npm/v/@fastcms/eslint-config) ![Peer ESLint Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/eslint) ![Peer Prettier Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/prettier) ![Peer TypeScript Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/typescript) ![Node.js Version](https://img.shields.io/node/v/@fastcms/eslint-config) ![Dependencies](https://img.shields.io/david/fastcms/eslint-config) ![Dev Dependencies](https://img.shields.io/david/dev/fastcms/eslint-config) ![NPM Weekly Downloads](https://img.shields.io/npm/dw/@fastcms/eslint-config) ![GitHub CI Workflow](https://github.com/fastcms/eslint-config/actions/workflows/main.yml/badge.svg)
+![NPM Package Version](https://img.shields.io/npm/v/@fastcms/eslint-config) ![Peer ESLint Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/eslint) ![Node.js Version](https://img.shields.io/node/v/@fastcms/eslint-config) ![Dependencies](https://img.shields.io/david/fastcms/eslint-config) ![Dev Dependencies](https://img.shields.io/david/dev/fastcms/eslint-config) ![NPM Weekly Downloads](https://img.shields.io/npm/dw/@fastcms/eslint-config) ![GitHub CI Workflow](https://github.com/fastcms/eslint-config/actions/workflows/main.yml/badge.svg)
 
 > Shared @eslint configs for web development projects of @fastcms.
 
@@ -86,8 +86,9 @@ Add eslint scripts to `package.json`, then run ESLint with `yarn run eslint` man
 
 If your project includes TypeScript code, you should provide `tsconfig.json` for ESLint, the searching priority of `tsconfig.json` are below.
 
-1. tsconfig.json (_root_)
-2. packages/\*/tsconfig.json (_workspace_)
+1. tsconfig.eslint.json (_root_)
+2. tsconfig.json (_root_)
+3. packages/\*/tsconfig.json (_workspace_)
 
 ## License
 
