@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/eslint-config",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "private": false,
   "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [
@@ -104,16 +104,16 @@
     "verbose": true
   },
   "dependencies": {
-    "@babel/eslint-parser": "^7.14.5",
+    "@babel/eslint-parser": "^7.14.7",
     "@babel/eslint-plugin": "^7.14.5",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-proposal-decorators": "^7.14.5",
     "@babel/plugin-proposal-private-methods": "^7.14.5",
     "@babel/plugin-syntax-top-level-await": "^7.14.5",
-    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
-    "@typescript-eslint/eslint-plugin": "^4.27.0",
-    "@typescript-eslint/parser": "^4.27.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -122,7 +122,7 @@
     "eslint-plugin-compat": "^3.9.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsdoc": "^35.3.0",
+    "eslint-plugin-jsdoc": "^35.4.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-markdown": "^2.2.0",
     "eslint-plugin-node": "^11.1.0",
@@ -138,15 +138,15 @@
     "@babel/core": "^7.14.6",
     "@types/eslint": "^7.2.13",
     "@types/jest": "^26.0.23",
-    "@types/node": "^15.12.2",
+    "@types/node": "^15.12.4",
     "@types/react": "^17.0.11",
-    "@types/react-dom": "^17.0.7",
-    "babel-jest": "^27.0.2",
+    "@types/react-dom": "^17.0.8",
+    "babel-jest": "^27.0.5",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.28.0",
+    "eslint": "^7.29.0",
     "husky": "^6.0.0",
-    "jest": "^27.0.4",
+    "jest": "^27.0.5",
     "lint-staged": "^11.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "2.3.1",
@@ -155,19 +155,19 @@
     "react-dom": "^17.0.2",
     "ts-jest": "^27.0.3",
     "ts-node": "^10.0.0",
-    "typescript": "^4.3.3"
+    "typescript": "^4.3.4"
   },
   "peerDependencies": {
     "@babel/core": "^7.14.6",
-    "eslint": "^7.28.0",
+    "eslint": "^7.29.0",
     "prettier": "^2.3.1"
   },
   "optionalDependencies": {
     "babel-plugin-module-resolver": "^4.1.0",
-    "typescript": "^4.3.3"
+    "typescript": "^4.3.4"
   },
   "engines": {
-    "node": ">=14.17.0"
+    "node": ">=14.17.1"
   },
   "publishConfig": {
     "access": "public",
