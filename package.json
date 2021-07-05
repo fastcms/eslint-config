@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/eslint-config",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "private": false,
   "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [
@@ -138,13 +138,13 @@
     "@babel/core": "^7.14.6",
     "@types/eslint": "^7.2.13",
     "@types/jest": "^26.0.23",
-    "@types/node": "^15.12.5",
-    "@types/react": "^17.0.11",
+    "@types/node": "^16.0.0",
+    "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
     "babel-jest": "^27.0.6",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.29.0",
+    "eslint": "^7.30.0",
     "husky": "^7.0.0",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.0",
@@ -159,7 +159,7 @@
   },
   "peerDependencies": {
     "@babel/core": "^7.14.6",
-    "eslint": "^7.29.0",
+    "eslint": "^7.30.0",
     "prettier": "^2.3.2"
   },
   "optionalDependencies": {
