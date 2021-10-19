@@ -41,11 +41,6 @@ describe('Test ESLint Config', () => {
     expect(message.ruleId).toEqual('jsdoc/require-param-description');
   });
 
-  it('tsdoc:syntax', async () => {
-    const message = await getLintMessage(`${filesRoot}/clamp.ts`);
-    expect(message.ruleId).toEqual('tsdoc/syntax');
-  });
-
   it('markdown:eqeqeq', async () => {
     const message = await getLintMessage(`${filesRoot}/eqeqeq.md`);
     expect(message.ruleId).toEqual('eqeqeq');
