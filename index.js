@@ -4,8 +4,6 @@
 module.exports = {
   extends: [require.resolve('./base.js')],
 
-  plugins: ['markdown'],
-
   overrides: [
     {
       files: ['**/*.jsx'],
