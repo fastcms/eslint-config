@@ -106,5 +106,11 @@ module.exports = {
         'prettier',
       ],
     },
+
+    {
+      files: ['**/__tests__/**/*.[jt]s', '**/?(*.)+(spec|test).[jt]s'],
+      extends: ['plugin:testing-library/dom'],
+      plugins: ['testing-library'],
+    },
   ],
 };

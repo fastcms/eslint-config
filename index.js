@@ -73,5 +73,11 @@ module.exports = {
         'react/jsx-no-undef': 'off',
       },
     },
+
+    {
+      files: ['**/__tests__/**/*.[jt]sx', '**/?(*.)+(spec|test).[jt]sx'],
+      extends: ['plugin:testing-library/react'],
+      plugins: ['testing-library'],
+    },
   ],
 };
