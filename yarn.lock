@@ -1557,6 +1557,11 @@
   dependencies:
     chalk "^4.0.0"
 
+"@emotion/eslint-plugin@^11.5.0":
+  version "11.5.0"
+  resolved "https://registry.yarnpkg.com/@emotion/eslint-plugin/-/eslint-plugin-11.5.0.tgz#1bad513b0d557e9a2cbf91415d409113595400c2"
+  integrity sha512-AyjeBIHuFYQIMLB+t5VRqXGzMkrD98p9aCgxTxt0DGBjQa6ExDU5xvhbeSjLRClc1zIYkDmbNBbGB71RAVgqFw==
+
 "@es-joy/jsdoccomment@0.10.8":
   version "0.10.8"
   resolved "https://registry.yarnpkg.com/@es-joy/jsdoccomment/-/jsdoccomment-0.10.8.tgz#b3152887e25246410ed4ea569a55926ec13b2b05"

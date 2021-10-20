@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/eslint-config",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "private": false,
   "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [
@@ -45,11 +45,11 @@
   ],
   "scripts": {
     "ci": "run-s prettier eslint test:ci",
-    "clean": "rimraf .eslintcache coverage",
+    "clean": "rimraf .DS_Store .eslintcache coverage",
     "commit": "git-cz",
     "commit:dirty": "git-cz --no-verify",
-    "eslint": "eslint --cache --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
-    "eslint:fix": "eslint --cache --fix --ext .js,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint": "eslint --cache --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
+    "eslint:fix": "eslint --cache --fix --ext .js,.cjs,.mjs,.jsx,.ts,.tsx,.md,.mdx .",
     "prepublishOnly": "yarn run ci",
     "prettier": "prettier --check \"**/*.{json,html,md,mdx}\"",
     "prettier:fix": "prettier --write \"**/*.{json,html,md,mdx}\"",
@@ -57,7 +57,7 @@
     "test:ci": "jest --ci --passWithNoTests"
   },
   "lint-staged": {
-    "**/*.{js,mjs,jsx,ts,tsx,md,mdx}": "yarn run eslint",
+    "**/*.{js,cjs,mjs,jsx,ts,tsx,md,mdx}": "yarn run eslint",
     "**/*.{json,html,md,mdx}": "yarn run prettier"
   },
   "config": {
@@ -140,6 +140,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
+    "@emotion/eslint-plugin": "^11.5.0",
     "@swc/core": "^1.2.100",
     "@swc/jest": "^0.2.4",
     "@testing-library/dom": "^8.10.1",
