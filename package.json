@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/eslint-config",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "private": false,
   "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [
@@ -92,7 +92,6 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.js",
-      "**/*.ts",
       "!**/*.d.ts",
       "!__files__/**",
       "!coverage/**",
