@@ -24,7 +24,10 @@ module.exports = {
         require.resolve('./lib/babel.js'),
         'prettier',
       ],
-      rules: {},
+      rules: {
+        'import/no-commonjs': 'off',
+        'unicorn/prefer-module': 'off',
+      },
     },
 
     {

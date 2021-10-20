@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/eslint-config",
-  "version": "1.7.2",
+  "version": "1.7.4",
   "private": false,
   "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [
@@ -141,7 +141,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@emotion/eslint-plugin": "^11.5.0",
-    "@swc/core": "^1.2.100",
+    "@swc/core": "^1.2.101",
     "@swc/jest": "^0.2.4",
     "@testing-library/dom": "^8.10.1",
     "@testing-library/jest-dom": "^5.14.1",
