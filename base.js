@@ -1,3 +1,6 @@
+// Fix eslint shareable config (https://github.com/eslint/eslint/issues/3458)
+require('@rushstack/eslint-patch/modern-module-resolution');
+
 /**
  * @type {import("eslint").Linter.Config}
  */
@@ -111,9 +114,8 @@ module.exports = {
     },
 
     {
-      files: ['**/__tests__/**/*.[jt]s', '**/?(*.)+(spec|test).[jt]s'],
-      extends: ['plugin:testing-library/dom'],
-      plugins: ['testing-library'],
+      files: ['**/__tests__/**/*.{js,ts}', '**/*.{spec,test}.{js,ts}'],
+      extends: [require.resolve('./lib/jest.js')],
     },
   ],
 };

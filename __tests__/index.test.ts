@@ -85,4 +85,9 @@ describe('Test ESLint Config', () => {
     const message = await getLintMessage(`${filesRoot}/xz.mjs`);
     expect(message.ruleId).toEqual('import/no-unresolved');
   });
+
+  it('jest/no-done-callback', async () => {
+    const message = await getLintMessage(`${filesRoot}/sum.test.js`);
+    expect(message.ruleId).toEqual('jest/no-done-callback');
+  });
 });
