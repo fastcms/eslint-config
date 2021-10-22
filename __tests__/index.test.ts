@@ -48,7 +48,7 @@ describe('Test ESLint Config', () => {
 
   it('markdown:react/no-array-index-key', async () => {
     const message = await getLintMessage(`${filesRoot}/no-array-index-key.md`);
-    expect(message.ruleId).toEqual('react/no-array-index-key');
+    expect(message).toBeUndefined();
   });
 
   it('markdown:@typescript-eslint/ban-types', async () => {
@@ -63,7 +63,7 @@ describe('Test ESLint Config', () => {
 
   it('mdx:react/no-array-index-key', async () => {
     const message = await getLintMessage(`${filesRoot}/no-array-index-key.mdx`);
-    expect(message.ruleId).toEqual('react/no-array-index-key');
+    expect(message).toBeUndefined();
   });
 
   it('mdx:react-hooks/exhaustive-deps', async () => {

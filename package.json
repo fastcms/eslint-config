@@ -1,6 +1,6 @@
 {
   "name": "@fastcms/eslint-config",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "private": false,
   "description": "Shared @eslint configs for web development projects of @fastcms.",
   "keywords": [
@@ -151,15 +151,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
-    "@swc/core": "^1.2.101",
+    "@swc/core": "^1.2.102",
     "@swc/jest": "^0.2.5",
     "@testing-library/dom": "^8.10.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "@types/eslint": "^7.28.1",
+    "@types/eslint": "^7.28.2",
     "@types/jest": "^27.0.2",
-    "@types/node": "^16.11.1",
+    "@types/node": "^16.11.2",
     "@types/react": "^17.0.31",
     "@types/react-dom": "^17.0.10",
     "babel-plugin-module-resolver": "^4.1.0",
