@@ -4,7 +4,7 @@
 
 > Shared @eslint configs for web development projects of @fastcms.
 
-**Go to <https://github.com/fastcms/fastcms/tree/master/tools/stylelint-config> for latest version.**
+**Go to <https://github.com/fastcms/fastcms/tree/master/tools/eslint-config> for latest version.**
 
 This shared ESLint config is extended from both [airbnb](https://github.com/airbnb/javascript) and [prettier](https://prettier.io/) styles, it also can be used for monorepo project.
 
