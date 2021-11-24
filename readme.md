@@ -1,8 +1,10 @@
-# eslint-config
+# [DEPRECATED] eslint-config
 
 ![NPM Package Version](https://img.shields.io/npm/v/@fastcms/eslint-config) ![Peer ESLint Version](https://img.shields.io/npm/dependency-version/@fastcms/eslint-config/peer/eslint) ![Node.js Version](https://img.shields.io/node/v/@fastcms/eslint-config) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) ![NPM Weekly Downloads](https://img.shields.io/npm/dw/@fastcms/eslint-config) ![GitHub CI Workflow](https://github.com/fastcms/eslint-config/actions/workflows/main.yml/badge.svg)
 
 > Shared @eslint configs for web development projects of @fastcms.
+
+**Go to <https://github.com/fastcms/fastcms/tree/master/tools/stylelint-config> for latest version.**
 
 This shared ESLint config is extended from both [airbnb](https://github.com/airbnb/javascript) and [prettier](https://prettier.io/) styles, it also can be used for monorepo project.
 
